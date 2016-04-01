@@ -17,7 +17,7 @@ Gemfile
 gem 'opal-sid'
 ```
 
-### Usage
+### Browser side
 
 ```ruby
 require 'sid'
