@@ -1,4 +1,0 @@
-languages:
-  - ruby
-exclude_paths:
-  - opal/vendor/*
