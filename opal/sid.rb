@@ -27,8 +27,8 @@ class SID
   alias_native :setstartcallback
   alias_native :setendcallback
 
-  def initialize(buffersize = 1024, background_noise = 0.0005)
-    @native = `new jsSID(buffersize, background_noise)`
+  def initialize(buffersize = 16384, background_noise = 0.0005)
+    @native = `new jsSID(#{buffersize}, #{background_noise})`
   end
 
   def on_load(&block)
