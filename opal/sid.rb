@@ -26,6 +26,7 @@ class SID
   alias_native :setloadcallback
   alias_native :setstartcallback
   alias_native :setendcallback
+  alias_native :setmemorywritecallback
 
   def initialize(buffersize = 16384, background_noise = 0.0005)
     @native = `new jsSID(#{buffersize}, #{background_noise})`
@@ -41,5 +42,9 @@ class SID
 
   def on_end(time, &block)
     setendcallback(block, time)
+  end
+
+  def on_memory_write(&block)
+    setmemorywritecallback(block)
   end
 end
